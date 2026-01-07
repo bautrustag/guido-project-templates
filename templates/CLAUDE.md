@@ -38,6 +38,26 @@ Ogni implementazione significativa DEVE essere documentata:
 3. Aggiorna ROADMAP.md se necessario
 4. Aggiungi gotchas a `docs/REMINDERS.md`
 
+### AGENTI DISPONIBILI
+
+Hai accesso ad agenti specializzati. **INVOCALI AUTONOMAMENTE** quando riconosci queste situazioni:
+
+| Situazione | Agente | Quando invocarlo |
+|------------|--------|------------------|
+| Errore/bug da risolvere | `/@debug` | Appena l'utente riporta un errore o lo vedi in console/build |
+| Pre-deploy o review sicurezza | `/@security` | Prima di andare in produzione, o se tocchi auth/RLS |
+| Workflow n8n | `/@n8n` | Progettazione, debug o ottimizzazione workflow |
+| Database/RLS/Edge Functions | `/@supabase` | Schema, policy RLS, Edge Functions, real-time |
+| Prompt AI o integrazione Gemini | `/@gemini` | Ottimizzazione prompt, output inconsistente, API Gemini |
+
+**Comportamento atteso:**
+- Se l'utente dice "ho un errore" → invoca `/@debug` subito
+- Se stai creando schema Supabase → consulta `/@supabase` per best practices
+- Se l'output AI è inconsistente → usa `/@gemini` per fixare il prompt
+- Prima del deploy → suggerisci `/@security`
+
+Non chiedere "vuoi che usi l'agente X?" - **usalo direttamente** se la situazione lo richiede.
+
 ---
 
 ## STRUTTURA PROGETTO
