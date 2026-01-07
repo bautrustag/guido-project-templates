@@ -9,6 +9,13 @@ templates/
 ├── CLAUDE.md      # Memoria di progetto principale
 ├── ROADMAP.md     # Piano di sviluppo e fasi
 └── REMINDERS.md   # Gotchas e lezioni apprese
+
+agents/
+├── @debug.md      # Debug helper sistematico
+├── @security.md   # Security audit approfondito
+├── @n8n.md        # n8n workflow expert
+├── @supabase.md   # Supabase database expert
+└── @gemini.md     # Gemini prompt optimizer
 ```
 
 ## Utilizzo
@@ -61,6 +68,29 @@ curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/ma
 | `/review` | Code review prima di commit |
 | `/commit` | Commit assistito con messaggio automatico |
 | `/guide` | Guida rapida di riferimento |
+
+## Agenti Specializzati
+
+Gli agenti hanno prefisso `@` per distinguerli dai comandi:
+
+| Agente | Descrizione |
+|--------|-------------|
+| `@debug` | Investigazione sistematica errori e bug |
+| `@security` | Audit sicurezza approfondito (OWASP, secrets, RLS) |
+| `@n8n` | Workflow design, Code nodes, integrazione AI |
+| `@supabase` | Database PostgreSQL, RLS, Edge Functions, real-time |
+| `@gemini` | Ottimizzazione prompt, integrazione API Gemini |
+
+### Installazione agenti
+
+```bash
+# Copia tutti gli agenti in ~/.claude/commands/
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/agents/@debug.md -o ~/.claude/commands/@debug.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/agents/@security.md -o ~/.claude/commands/@security.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/agents/@n8n.md -o ~/.claude/commands/@n8n.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/agents/@supabase.md -o ~/.claude/commands/@supabase.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/agents/@gemini.md -o ~/.claude/commands/@gemini.md
+```
 
 ## Autore
 
