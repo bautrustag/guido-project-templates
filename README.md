@@ -32,21 +32,35 @@ curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/ma
 
 ```
 /
-├── docs/                 # Documenti di implementazione
-│   ├── REMINDERS.md      # Gotchas e lezioni apprese
-│   └── YYYY-MM-DD-*.md   # Documenti di sessione
-├── prompts/              # Cronologia prompt salvati
-├── src/                  # Codice sorgente
-├── CLAUDE.md             # Memoria progetto
-├── ROADMAP.md            # Piano sviluppo
-└── README.md
+├── CLAUDE.md                # Memoria progetto
+├── ROADMAP.md               # Piano sviluppo e fasi
+├── README.md                # Readme pubblico
+├── docs/                    # Documentazione
+│   ├── REMINDERS.md         # Gotchas e lezioni apprese
+│   └── YYYY-MM-DD-*.md      # Documenti di sessione
+├── prompts/                 # Cronologia prompt salvati
+├── scripts/                 # Script utility (opzionale)
+├── src/                     # Codice sorgente
+│   ├── components/          # Componenti UI
+│   ├── lib/                 # Utilities, helpers
+│   ├── pages/               # Pagine/routes
+│   ├── types/               # TypeScript types
+│   └── ...
+└── tests/                   # Test (se non in src/)
 ```
 
 ## Comandi Claude Code Correlati
 
-- `/start` - Inizializza un nuovo progetto con questi template
-- `/docs` - Aggiornamento documentazione leggero (mid-session)
-- `/close` - Chiusura sessione con documentazione completa
+| Comando | Descrizione |
+|---------|-------------|
+| `/start` | Inizializza nuovo progetto con struttura e template |
+| `/status` | Riepilogo rapido: TODO, fase corrente, ultime sessioni |
+| `/docs` | Aggiornamento documentazione leggero (mid-session) |
+| `/close` | Chiusura sessione completa |
+| `/audit` | Analisi profonda: sicurezza, qualità, performance |
+| `/review` | Code review prima di commit |
+| `/commit` | Commit assistito con messaggio automatico |
+| `/guide` | Guida rapida di riferimento |
 
 ## Autore
 

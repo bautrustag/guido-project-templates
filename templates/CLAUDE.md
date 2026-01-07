@@ -26,7 +26,7 @@
 ### ERRORI RICORRENTI
 
 Prima di modificare codice critico:
-1. **LEGGI** il file `docs/reminders.md`
+1. **LEGGI** il file `docs/REMINDERS.md`
 2. Contiene errori già risolti in passato e come evitarli
 3. **AGGIORNA** il file quando si scopre un nuovo errore ricorrente
 
@@ -36,7 +36,7 @@ Ogni implementazione significativa DEVE essere documentata:
 1. Crea un documento in `/docs` con formato `YYYY-MM-DD-HH-MM-descrizione.md`
 2. Aggiorna CLAUDE.md (storico sessioni)
 3. Aggiorna ROADMAP.md se necessario
-4. Aggiungi gotchas a `docs/reminders.md`
+4. Aggiungi gotchas a `docs/REMINDERS.md`
 
 ---
 
@@ -44,12 +44,21 @@ Ogni implementazione significativa DEVE essere documentata:
 
 ```
 /
-├── docs/                 # Documenti di implementazione
-├── prompts/              # Cronologia prompt salvati
-├── src/                  # Codice sorgente
-├── CLAUDE.md             # Questo file
-├── ROADMAP.md            # Piano di sviluppo
-└── README.md
+├── CLAUDE.md                # Memoria progetto (questo file)
+├── ROADMAP.md               # Piano sviluppo e fasi
+├── README.md                # Readme pubblico
+├── docs/                    # Documentazione
+│   ├── REMINDERS.md         # Gotchas e lezioni apprese
+│   └── YYYY-MM-DD-*.md      # Documenti di sessione
+├── prompts/                 # Cronologia prompt salvati
+├── scripts/                 # Script utility (opzionale)
+├── src/                     # Codice sorgente
+│   ├── components/          # Componenti UI
+│   ├── lib/                 # Utilities, helpers
+│   ├── pages/               # Pagine/routes
+│   ├── types/               # TypeScript types
+│   └── ...
+└── tests/                   # Test (se non in src/)
 ```
 
 ---
