@@ -8,7 +8,7 @@ Template standardizzati per progetti gestiti con Claude Code.
 templates/
 ├── CLAUDE.md      # Memoria di progetto principale
 ├── ROADMAP.md     # Piano di sviluppo e fasi
-└── reminders.md   # Gotchas e lezioni apprese
+└── REMINDERS.md   # Gotchas e lezioni apprese
 ```
 
 ## Utilizzo
@@ -24,8 +24,8 @@ curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/ma
 # ROADMAP.md
 curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/ROADMAP.md -o ROADMAP.md
 
-# reminders.md
-curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/reminders.md -o docs/reminders.md
+# REMINDERS.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/REMINDERS.md -o docs/REMINDERS.md
 ```
 
 ## Struttura Progetto Consigliata
@@ -33,7 +33,7 @@ curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/ma
 ```
 /
 ├── docs/                 # Documenti di implementazione
-│   ├── reminders.md      # Gotchas e lezioni apprese
+│   ├── REMINDERS.md      # Gotchas e lezioni apprese
 │   └── YYYY-MM-DD-*.md   # Documenti di sessione
 ├── prompts/              # Cronologia prompt salvati
 ├── src/                  # Codice sorgente
