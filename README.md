@@ -19,13 +19,13 @@ I template vengono scaricati automaticamente dal comando `/start` di Claude Code
 
 ```bash
 # CLAUDE.md
-curl -sL https://raw.githubusercontent.com/guidoalberti/guido-project-templates/main/templates/CLAUDE.md -o CLAUDE.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/CLAUDE.md -o CLAUDE.md
 
 # ROADMAP.md
-curl -sL https://raw.githubusercontent.com/guidoalberti/guido-project-templates/main/templates/ROADMAP.md -o ROADMAP.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/ROADMAP.md -o ROADMAP.md
 
 # reminders.md
-curl -sL https://raw.githubusercontent.com/guidoalberti/guido-project-templates/main/templates/reminders.md -o docs/reminders.md
+curl -sL https://raw.githubusercontent.com/bautrustag/guido-project-templates/main/templates/reminders.md -o docs/reminders.md
 ```
 
 ## Struttura Progetto Consigliata
