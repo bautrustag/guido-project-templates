@@ -1,8 +1,8 @@
-# Optimize - Archivia Contenuti per Liberare Contesto
+# Optimize - Archive Content to Free Context
 
-## ⚠️ REGOLA FONDAMENTALE
+## ⚠️ GOLDEN RULE
 
-**MAI CANCELLARE NULLA. SOLO ARCHIVIARE.**
+**NEVER DELETE ANYTHING. ONLY ARCHIVE.**
 
 Tutto il contenuto rimosso dai file principali DEVE essere salvato in `docs/archive/`.
 

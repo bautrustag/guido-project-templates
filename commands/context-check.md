@@ -1,4 +1,4 @@
-# Context Check - Verifica Salute Contesto
+# Context Check - Context Health Analysis
 
 ## Istruzioni per Claude
 
@@ -45,7 +45,6 @@ wc -l ROADMAP.md 2>/dev/null
 ### STEP 4: Calcola totale Memory Files
 
 ```bash
-# Conta tutti i .md che Claude Code carica
 total=0
 for f in CLAUDE.md ROADMAP.md docs/*.md; do
   if [ -f "$f" ]; then
@@ -77,7 +76,6 @@ Genera tabella riassuntiva:
 | CLAUDE.md | XX | ✅/⚠️/🔴 | ... |
 | ROADMAP.md | XX | ✅/⚠️/🔴 | ... |
 | docs/reminders.md | XX | ✅/⚠️/🔴 | ... |
-| docs/storico-sessioni.md | XX | ✅/⚠️/🔴 | ... |
 | ... | ... | ... | ... |
 | **TOTALE** | XXX | ✅/⚠️/🔴 | ... |
 

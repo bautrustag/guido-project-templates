@@ -1,4 +1,4 @@
-# Status - Riepilogo Stato Progetto
+# Status - Project Status Summary
 
 ## Istruzioni per Claude
 
