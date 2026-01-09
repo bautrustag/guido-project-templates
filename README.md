@@ -184,6 +184,14 @@ claude              # Apri Claude Code
 
 ---
 
+## Installazione Rapida (collaboratori)
+```bash
+git clone https://github.com/bautrustag/guido-project-templates.git
+cd guido-project-templates
+chmod +x install.sh
+./install.sh
+```
+
 ## Autore
 
 Guido Alberti - Gruppo Alberti
