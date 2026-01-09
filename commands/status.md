@@ -1,61 +1,76 @@
----
-description: Riepilogo rapido stato progetto
-allowed-tools: Read, Bash
----
+# Status - Riepilogo Stato Progetto
 
-# Status Progetto
+## Istruzioni per Claude
 
-Mostra un riepilogo rapido dello stato attuale.
+Quando l'utente invoca `/status`, esegui:
 
-## 1. TODO Correnti
-
-Leggi la sezione "PROSSIMI PASSI" da CLAUDE.md e mostrala.
-
-## 2. Fase Corrente
-
-Leggi ROADMAP.md e identifica:
-- Nome fase corrente
-- % completamento (conta checkbox)
-
-## 3. Ultime Sessioni
-
-Leggi le ultime 3 righe da `docs/STORICO-SESSIONI.md` (se esiste).
-
-## 4. Health Rapido
+### STEP 1: Quick Context Check
 
 ```bash
-# Build OK?
-npm run build 2>&1 > /dev/null && echo "Build: ✅" || echo "Build: ❌"
+echo "=== CONTEXT QUICK CHECK ==="
+claude_lines=$(wc -l < CLAUDE.md 2>/dev/null || echo "0")
+echo "CLAUDE.md: $claude_lines righe"
 
-# Righe CLAUDE.md
-echo "CLAUDE.md: $(wc -l < CLAUDE.md) righe"
+if [ "$claude_lines" -gt 150 ]; then
+  echo "⚠️ CLAUDE.md troppo grande - considera /optimize"
+fi
+
+# Check totale docs
+total=$(wc -l docs/*.md 2>/dev/null | tail -1 | awk '{print $1}')
+echo "docs/*.md totale: $total righe"
+
+if [ "$total" -gt 1500 ]; then
+  echo "⚠️ docs/ troppo grande - considera /optimize"
+fi
 ```
 
----
+### STEP 2: Leggi Stato Progetto
 
-## Output
+Da CLAUDE.md estrai:
+- Fase corrente
+- Prossimi passi
+- Eventuali blocchi
 
-```markdown
-# 📊 Status - [PROGETTO]
+Da ROADMAP.md estrai:
+- Fase attuale e percentuale completamento
+- Prossimi milestone
 
-## 🎯 Prossimi Passi
-- [ ] [Task 1 da CLAUDE.md]
-- [ ] [Task 2]
-- [ ] [Task 3]
+### STEP 3: Ultime Sessioni
 
-## 📍 Fase Corrente
-**[Nome Fase]** - [N]% completato
+```bash
+ls -lt docs/*.md 2>/dev/null | head -5
+```
 
-## 📅 Ultime Sessioni
-| Data | Lavoro |
-|------|--------|
-| [data] | [descrizione] |
-| [data] | [descrizione] |
+Mostra ultime sessioni/modifiche.
 
-## 🏥 Health
-- Build: ✅/❌
-- CLAUDE.md: N/80 righe
+### STEP 4: Verifica Build
 
----
-Da dove vuoi partire oggi?
+```bash
+npm run build 2>&1 | tail -5
+```
+
+### STEP 5: Output
+
+```
+## 📊 STATUS PROGETTO
+
+### Context Health
+| Metrica | Valore | Stato |
+|---------|--------|-------|
+| CLAUDE.md | XX righe | ✅/⚠️ |
+| docs/ totale | XX righe | ✅/⚠️ |
+
+[Se warning: "💡 Esegui /context-check per dettagli, /optimize per archiviare"]
+
+### Fase Corrente
+[Da ROADMAP.md]
+
+### Prossimi Passi
+[Da CLAUDE.md]
+
+### Ultime Sessioni
+[Lista ultime 3-5 sessioni]
+
+### Build Status
+✅ OK / ❌ Errori
 ```
