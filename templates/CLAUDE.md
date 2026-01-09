@@ -57,5 +57,13 @@ npm run lint     # baseline: N errori (non aggiungerne)
 - [ ] [Task priorità alta 2]
 - [ ] [Task priorità media 1]
 
+## ⚠️ REGOLE FERREE
+
+1. **MAI dire "fatto" senza `npm run build` pulito**
+2. **Dopo 2 tentativi falliti → STOP e chiedi**
+3. **NON inventare test o dati** — usa quelli reali o chiedi
+4. **Se non capisci la richiesta → chiedi PRIMA di scrivere codice**
+5. **Mostra cosa hai modificato** — mai solo "ho fixato"
+
 ---
 _Ultimo update: [DATA] | Righe: ~70/80 | Versione: 1.0_
