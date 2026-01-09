@@ -192,6 +192,9 @@ chmod +x install.sh
 ./install.sh
 ```
 
+## 📖 Guide
+- `GUIDA-COMUNICAZIONE-CLAUDE-CODE.md` - Come comunicare efficacemente con Claude Code
+
 ## Autore
 
 Guido Alberti - Gruppo Alberti
