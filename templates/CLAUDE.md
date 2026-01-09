@@ -65,5 +65,13 @@ npm run lint     # baseline: N errori (non aggiungerne)
 4. **Se non capisci la richiesta → chiedi PRIMA di scrivere codice**
 5. **Mostra cosa hai modificato** — mai solo "ho fixato"
 
+## 🎯 PRIMA DI INIZIARE OGNI TASK
+
+Scrivi 3 "Criteri di Verifica" che l'utente dovrà controllare per accettare il lavoro.
+Esempio:
+- [ ] Il popup appare quando clicco il bottone
+- [ ] Il dato si salva su Supabase
+- [ ] La lista si aggiorna senza refresh
+
 ---
 _Ultimo update: [DATA] | Righe: ~70/80 | Versione: 1.0_
