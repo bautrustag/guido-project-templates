@@ -1,0 +1,27 @@
+# ============================================================
+# .aider.conf.yml — Configurazione Aider per progetto
+# ============================================================
+# Questo file viene letto automaticamente da Aider all'avvio.
+# Posizionalo nella ROOT del progetto.
+#
+# Docs: https://aider.chat/docs/config/aider_conf.html
+# ============================================================
+
+# Modello predefinito (Kimi K2.5 via OpenRouter)
+model: openrouter/moonshotai/kimi-k2.5
+
+# File di istruzioni — Aider li legge ma NON li modifica
+read:
+  - KIMI.md
+  - docs/SESSION-STATE.md
+  - docs/REMINDERS.md
+
+# Interfaccia
+dark-mode: true
+pretty: true
+
+# Git — disabilita auto-commit, tu controlli quando committare
+auto-commits: false
+
+# Cache prompt per risparmiare token
+cache-prompts: true

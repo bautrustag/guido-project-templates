@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# AI Tools
+.aider*
+!.aider.conf.yml
